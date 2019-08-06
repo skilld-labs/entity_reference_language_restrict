@@ -1,0 +1,10 @@
+{
+  "name": "skilld/entity_reference_language_restrict",
+  "description": "Provides ability to restrict referenced entities by language.",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Entity reference", "Language"],
+  "license": "MIT",
+  "require": {
+    "drupal/core": "~8"
+  }
+}

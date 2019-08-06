@@ -1,0 +1,33 @@
+entity_reference_selection.entity_reference_language_restrict:
+  type: entity_reference_selection
+  label: 'Entity reference with language restriction handler settings'
+  mapping:
+    language_restriction:
+      type: string
+      label: 'Restrict available items by language.'
+    target_bundles:
+      type: sequence
+      label: 'types'
+      nullable: true
+      sequence:
+        type: string
+        label: 'Bundle'
+    sort:
+      type: mapping
+      label: 'Sort settings'
+      mapping:
+        field:
+          type: string
+          label: 'Sort by'
+        direction:
+          type: string
+          label: 'Sort direction'
+    auto_create:
+      type: boolean
+      label: 'Create referenced entities if they don''t already exist'
+    auto_create_bundle:
+      type: string
+      label: 'Bundle assigned to the auto-created entities.'
+
+entity_reference_selection.entity_reference_language_restrict:*:
+  type: entity_reference_selection.entity_reference_language_restrict
