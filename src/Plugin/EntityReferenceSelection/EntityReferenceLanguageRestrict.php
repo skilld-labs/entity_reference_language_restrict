@@ -172,7 +172,7 @@ class EntityReferenceLanguageRestrict extends DefaultSelection {
   protected function buildEntityQuery($match = NULL, $match_operator = 'CONTAINS') {
     $query = parent::buildEntityQuery($match, $match_operator);
     $configuration = $this->getConfiguration();
-    $entity_type = $this->entityManager->getDefinition($configuration['target_type']);
+    $entity_type = $this->entityTypeManager->getDefinition($configuration['target_type']);
 
     if (($langcode = $this->getLanguageRestriction()) && ($langcode_key = $entity_type->getKey('langcode'))) {
       $query->condition($langcode_key, $langcode);
